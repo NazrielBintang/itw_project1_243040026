@@ -5,12 +5,11 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: linear-gradient(#a9a9a9, rgb(83, 83, 249)
-    , #A9A9A9);
-    height: 100%;
+    background-image: linear-gradient(#a9a9a9, #707aec, #A9A9A9);
 }
 
 /* Nav Menu */
@@ -137,13 +136,14 @@ nav ul li a:hover {
 
 .sosmed {
     display: grid;
-    grid-template-columns: repeat(2, 80px);
+    grid-template-columns: repeat(2, 70px);
     overflow: hidden;
 }
 
 .sosmed .ins {
-    width: 52px;
+    width: 51px;
     margin-top: 1px;
+    margin-left: 2px;
     transition: .3s ease;
 }
 
@@ -152,7 +152,7 @@ nav ul li a:hover {
 }
 
 .sosmed .tik {
-    width: 49px;
+    width: 52px;
     transition: .3s ease;
 }
 
@@ -162,6 +162,8 @@ nav ul li a:hover {
 
 .home-img {
     transition: .3s ease;
+    margin-bottom: 21px;
+    
 } 
 
 .home-img:hover {
@@ -206,6 +208,7 @@ nav ul li a:hover {
     border: 2px solid;
     transition: .3s ease;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .hire:hover {
@@ -219,7 +222,7 @@ nav ul li a:hover {
 /* About */
 
 .about {
-    margin: 500px auto;
+    margin: 50px auto;
     border-radius: 10px;
     box-shadow: 0 0 15px;
     width: 80%;
@@ -259,8 +262,8 @@ nav ul li a:hover {
 /* skill */
 
 .bakat {
-    margin: 500px auto;
-    width: 50%;
+    margin: 100px auto;
+    width: 60%;
     border-radius: 10px;
     box-shadow: 0 0 15px;
 }
@@ -294,7 +297,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: .8px;
+    padding: 1rem;
     margin-bottom: 10px;
 }
 
@@ -315,7 +318,7 @@ nav ul li a:hover {
     justify-content: center;
     justify-items: center;
     transition: .3 ease;
-    box-shadow: 0 0 50px 18px #a9a9a9;
+    box-shadow: 0 0 80px 10px #a9a9a9;
     border: 3px solid black;
 }
 
@@ -379,8 +382,8 @@ nav ul li a:hover {
 /* Experience */
 
 .pengalaman {
-    margin: 50px auto;
-    width: 50%;
+    margin: 100px auto;
+    width: 60%;
     border-radius: 10px;
     box-shadow: 0 0 15px;
 }
@@ -432,7 +435,7 @@ nav ul li a:hover {
     position: relative;
     justify-content: center;
     justify-items: center;
-    box-shadow: 0 0 50px 18px #a9a9a9;
+    box-shadow: 0 0 80px 10px #a9a9a9;
     border: 3px solid black;
 }
 
@@ -449,7 +452,7 @@ nav ul li a:hover {
 /* Contact */
 
 .contact {
-    height: 100vh;
+    margin: 100px auto;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -462,7 +465,7 @@ nav ul li a:hover {
     max-width: 600px;
     box-shadow: 0 0 15px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .form h1 {
@@ -540,16 +543,41 @@ nav ul li a:hover {
 
 /* Responsive */
 
-/* Ukuran Tablet */
-@media screen and (max-width: 768px) {
-    nav ul {
-        width: 50%;
+@media screen and (max-width: 930px) {
+    .home, .kem, .exp, .about .desc{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home {
+        gap: 10px;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    .sosmed {
+        justify-content: center;
+    }
+
+    .home-content p {
+        margin-left: 145px;
+    }
+
+    .fotoskill img, .fotopengalaman img {
+        width: 250px;
     }
 }
+
+
 
 /* Ukuran Handphone */
 
 @media (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     .menu-toggle {
         display: flex;
         z-index: 10;
@@ -558,28 +586,26 @@ nav ul li a:hover {
         position: absolute;
         right: 0;
         top: 0;
-        width: 60%;
+        width: 100%;
         height: 100vh;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
         background-color: black;
         z-index: -1;
-        transform: translatex(100%);
+        transform: translatey(-50%);
         transition: all 1s;
         opacity: 0;
         z-index: 10;
     }
-}
+
 
 nav ul.slide {
     transform: translateX(0);
     opacity: 1;
+    }
 }
 
-.home {
-    
-}
 
 
 
